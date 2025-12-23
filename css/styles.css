@@ -1,7 +1,7 @@
 /* ----- BODY GENERAL ----- */
 body {
-  background: #fff;
-  color: #111;
+  background-color: #000;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -14,15 +14,15 @@ header.top {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #ddd;
+  background-color: #111;
+  border-bottom: 1px solid #333;
 }
 
 header h1 {
   font-family: 'Georgia', serif;
   font-size: 36px;
   font-weight: bold;
-  color: #222;
+  color: gold;
   margin: 0;
 }
 
@@ -30,88 +30,124 @@ header h1 {
 .hamburguesa {
   font-size: 30px;
   cursor: pointer;
-  color: #222;
+  color: gold;
 }
 
 /* ----- MENÚ ----- */
 .menu {
   display: none;
   flex-direction: column;
-  background: #f8f8f8;
+  background-color: #111;
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #ddd;
 }
 
 .menu a {
-  color: #222;
+  color: gold;
   padding: 15px 20px;
   text-decoration: none;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
   font-size: 18px;
 }
 
 .menu a:hover {
-  color: #e67e22;
+  color: orange;
 }
 
 .menu.activo {
   display: flex;
 }
 
-/* ----- MAIN ----- */
-main {
+/* ----- SECCIONES ----- */
+section {
+  padding: 60px 20px;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 20px;
 }
 
-main h2 {
+section h2 {
   font-family: 'Georgia', serif;
   font-size: 32px;
-  color: #222;
+  color: gold;
   margin-bottom: 20px;
-  text-align: left;
 }
 
-main p {
+section p {
   font-family: 'Arial', sans-serif;
   font-size: 18px;
-  color: #333;
+  color: #ddd;
   margin-bottom: 15px;
   line-height: 1.8;
-  text-align: left;
 }
 
-main a {
+/* ----- BOTONES ----- */
+a.boton {
   display: inline-block;
   margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #e67e22;
-  color: #fff;
+  padding: 10px 20px;
+  background-color: orange;
+  color: #000;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: bold;
 }
 
-main a:hover {
-  background-color: #d35400;
+a.boton:hover {
+  background-color: gold;
+}
+
+/* ----- IMÁGENES ----- */
+section img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
 
 /* ----- FOOTER ----- */
 footer {
-  padding: 15px 20px;
-  background-color: #f8f8f8;
-  color: #222;
+  padding: 20px;
+  background-color: #111;
+  color: gold;
   text-align: center;
   font-size: 14px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #333;
 }
 
 footer a {
-  color: #e67e22;
+  color: orange;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #d35400;
+  color: gold;
+}
+
+/* ----- FORMULARIO ----- */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px;
+  background-color: orange;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: gold;
 }
