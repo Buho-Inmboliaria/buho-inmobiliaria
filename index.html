@@ -1,193 +1,238 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Búho Inmobiliaria | Tu hogar, nuestra misión</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compra, vende o regulariza tu propiedad con Búho Inmobiliaria. Asesoría profesional en INFONAVIT, créditos y venta de inmuebles.">
-  <style>
-    :root {
-      --negro: #0b0b0b;
-      --dorado: #c9a44a;
-      --naranja: #e07a1f;
-      --gris: #f4f4f4;
-    }
+<meta charset="UTF-8">
+<title>Búho Inmobiliaria | Tu hogar, nuestra misión</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: var(--gris);
-      color: #222;
-      line-height: 1.6;
-    }
+<style>
+:root{
+  --negro:#0b0b0b;
+  --dorado:#c9a44a;
+  --naranja:#e07a1f;
+  --gris:#f4f4f4;
+}
 
-    header {
-      background: linear-gradient(135deg, var(--negro), #1a1a1a);
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
+*{box-sizing:border-box}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.6rem;
-      letter-spacing: 1px;
-    }
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--gris);
+  color:#222;
+  scroll-behavior:smooth;
+}
 
-    header p {
-      margin-top: 15px;
-      font-size: 1.2rem;
-      color: #ddd;
-    }
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:var(--negro);
+  color:white;
+  z-index:1000;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: linear-gradient(135deg, var(--dorado), var(--naranja));
-      color: black;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: transform 0.2s ease;
-    }
+.nav-container{
+  max-width:1100px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
+.logo{
+  font-weight:bold;
+  letter-spacing:1px;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
+}
 
-    section h2 {
-      font-size: 2rem;
-      color: var(--negro);
-      margin-bottom: 15px;
-      border-left: 6px solid var(--dorado);
-      padding-left: 12px;
-    }
+.menu{
+  display:none;
+  background:#000;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
+.menu a{
+  display:block;
+  padding:15px 20px;
+  color:white;
+  text-decoration:none;
+  border-top:1px solid #222;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      border-top: 4px solid var(--naranja);
-    }
+.menu a:hover{
+  background:#111;
+}
 
-    .card h3 {
-      margin-top: 0;
-      color: var(--negro);
-    }
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--negro),#1a1a1a);
+  color:white;
+  padding:120px 20px 80px;
+  text-align:center;
+}
 
-    .highlight {
-      background: var(--negro);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
+header h1{
+  font-size:2.6rem;
+  margin:0;
+}
 
-    .highlight h2 {
-      color: var(--dorado);
-      border: none;
-      padding: 0;
-    }
+header p{
+  margin-top:15px;
+  color:#ddd;
+}
 
-    footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 25px;
-      font-size: 0.9rem;
-    }
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 30px;
+  background:linear-gradient(135deg,var(--dorado),var(--naranja));
+  color:black;
+  font-weight:bold;
+  text-decoration:none;
+  border-radius:30px;
+}
 
-    .contact-box {
-      background: white;
-      padding: 35px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+/* SECTIONS */
+section{
+  padding:70px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    .phone {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: var(--negro);
-      margin-top: 10px;
-    }
-  </style>
+section h2{
+  border-left:6px solid var(--dorado);
+  padding-left:12px;
+  font-size:2rem;
+  margin-bottom:15px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  border-top:4px solid var(--naranja);
+}
+
+.highlight{
+  background:var(--negro);
+  color:white;
+  text-align:center;
+  padding:70px 20px;
+}
+
+.highlight h2{
+  color:var(--dorado);
+  border:none;
+}
+
+footer{
+  background:#000;
+  color:#aaa;
+  text-align:center;
+  padding:25px;
+  font-size:.9rem;
+}
+</style>
+
+<script>
+function toggleMenu(){
+  const menu=document.getElementById("menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+function closeMenu(){
+  document.getElementById("menu").style.display="none";
+}
+</script>
 </head>
 
 <body>
 
-<header>
+<nav>
+  <div class="nav-container">
+    <div class="logo">Búho Inmobiliaria</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </div>
+  <div class="menu" id="menu">
+    <a href="#inicio" onclick="closeMenu()">Inicio</a>
+    <a href="#nosotros" onclick="closeMenu()">Quiénes somos</a>
+    <a href="#servicios" onclick="closeMenu()">Servicios</a>
+    <a href="#proceso" onclick="closeMenu()">Proceso</a>
+    <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  </div>
+</nav>
+
+<header id="inicio">
   <h1>Búho Inmobiliaria</h1>
   <p>Tu hogar, nuestra misión.</p>
   <a class="btn" href="https://wa.me/5218992349622" target="_blank">
-    Agenda tu asesoría ahora
+    Agenda tu asesoría
   </a>
 </header>
 
-<section>
+<section id="nosotros">
   <h2>Quiénes somos</h2>
   <p>
-    En <strong>Búho Inmobiliaria</strong> nos especializamos en ayudarte a comprar, vender
-    y regularizar tu propiedad de manera segura. Trabajamos con transparencia,
-    experiencia y atención personalizada para que tomes decisiones con confianza.
+    En <strong>Búho Inmobiliaria</strong> brindamos asesoría inmobiliaria
+    con enfoque profesional, discreto y transparente.  
+    Nuestro objetivo es ayudarte a tomar decisiones seguras
+    en la compra, venta o regularización de tu propiedad.
   </p>
 </section>
 
-<section>
-  <h2>Nuestros servicios</h2>
+<section id="servicios">
+  <h2>Servicios</h2>
   <div class="cards">
     <div class="card">
-      <h3>Compra de vivienda</h3>
-      <p>Casas nuevas, usadas o recuperadas, adaptadas a tu presupuesto.</p>
+      <strong>Compra de vivienda</strong><br>
+      Casas nuevas, usadas o recuperadas.
     </div>
     <div class="card">
-      <h3>Regularización INFONAVIT</h3>
-      <p>Te apoyamos aunque tengas adeudos de agua, luz o predial.</p>
+      <strong>Apoyo INFONAVIT</strong><br>
+      Acompañamiento en procesos y regularización.
     </div>
     <div class="card">
-      <h3>Crédito MEJORAVIT</h3>
-      <p>Tramitamos tu crédito para mejorar o ampliar tu vivienda.</p>
+      <strong>Crédito MEJORAVIT</strong><br>
+      Trámite y asesoría.
     </div>
     <div class="card">
-      <h3>Venta de propiedades</h3>
-      <p>Promocionamos y vendemos tu inmueble de forma profesional.</p>
+      <strong>Venta de propiedades</strong><br>
+      Promoción responsable y profesional.
     </div>
   </div>
 </section>
 
-<div class="highlight">
-  <h2>Asesoría profesional y certificada</h2>
-  <p>Te acompañamos en todo el proceso, de inicio a cierre.</p>
+<div class="highlight" id="proceso">
+  <h2>Nuestro proceso</h2>
+  <p>
+    Evaluamos tu situación → te asesoramos → te acompañamos  
+    hasta concluir el proceso con claridad y confianza.
+  </p>
 </div>
 
-<section>
+<section id="contacto">
   <h2>Contacto</h2>
-  <div class="contact-box">
-    <p>Comunícate con nosotros y recibe atención inmediata.</p>
-    <div class="phone">📞 899 234 9622</div>
-    <a class="btn" href="https://wa.me/5218992349622" target="_blank">
-      Hablar por WhatsApp
-    </a>
-  </div>
+  <p>Atención directa y personalizada.</p>
+  <a class="btn" href="https://wa.me/5218992349622" target="_blank">
+    WhatsApp 899 234 9622
+  </a>
 </section>
 
 <footer>
-  © 2025 Búho Inmobiliaria · Todos los derechos reservados
+© 2025 Búho Inmobiliaria · Todos los derechos reservados
 </footer>
 
 </body>
