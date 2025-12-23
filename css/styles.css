@@ -1,3 +1,41 @@
 body {
   background: black;
 }
+
+body {
+  background: black;
+}
+
+/* ----- HEADER ----- */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #000;
+}
+
+/* ----- HAMBURGUESA ----- */
+.hamburguesa {
+  font-size: 30px;
+  cursor: pointer;
+  color: gold;
+}
+
+/* ----- MENÚ ----- */
+.menu {
+  display: none;
+  flex-direction: column;
+  background: #111;
+}
+
+.menu a {
+  color: gold;
+  padding: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.menu.activo {
+  display: flex;
+}
