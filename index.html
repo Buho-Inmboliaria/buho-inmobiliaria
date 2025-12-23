@@ -4,63 +4,126 @@
   <meta charset="UTF-8">
   <title>Búho Inmobiliaria | Tu hogar, nuestra misión</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Búho Inmobiliaria: compra, venta y renta de propiedades residenciales con asesoría profesional.">
+  <meta name="description" content="Compra, vende o regulariza tu propiedad con Búho Inmobiliaria. Asesoría profesional en INFONAVIT, créditos y venta de inmuebles.">
   <style>
+    :root {
+      --negro: #0b0b0b;
+      --dorado: #c9a44a;
+      --naranja: #e07a1f;
+      --gris: #f4f4f4;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #333;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--gris);
+      color: #222;
+      line-height: 1.6;
     }
+
     header {
-      background: #0f172a;
+      background: linear-gradient(135deg, var(--negro), #1a1a1a);
       color: white;
-      padding: 40px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.6rem;
+      letter-spacing: 1px;
     }
+
     header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #ddd;
     }
+
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #22c55e;
-      color: white;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, var(--dorado), var(--naranja));
+      color: black;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 30px;
       font-weight: bold;
+      transition: transform 0.2s ease;
     }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
     }
-    h2 {
-      color: #0f172a;
+
+    section h2 {
+      font-size: 2rem;
+      color: var(--negro);
+      margin-bottom: 15px;
+      border-left: 6px solid var(--dorado);
+      padding-left: 12px;
     }
-    .services {
+
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
     }
+
     .card {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-top: 4px solid var(--naranja);
     }
-    footer {
-      background: #0f172a;
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--negro);
+    }
+
+    .highlight {
+      background: var(--negro);
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 60px 20px;
+    }
+
+    .highlight h2 {
+      color: var(--dorado);
+      border: none;
+      padding: 0;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
       font-size: 0.9rem;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .phone {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: var(--negro);
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -68,41 +131,62 @@
 <body>
 
 <header>
-  <h1>Búho Inmobiliaria 🦉</h1>
+  <h1>Búho Inmobiliaria</h1>
   <p>Tu hogar, nuestra misión.</p>
-  <a class="btn" href="https://wa.me/521TUNUMERO" target="_blank">
-    Contáctanos por WhatsApp
+  <a class="btn" href="https://wa.me/5218992349622" target="_blank">
+    Agenda tu asesoría ahora
   </a>
 </header>
 
 <section>
-  <h2>¿Quiénes somos?</h2>
+  <h2>Quiénes somos</h2>
   <p>
-    En <strong>Búho Inmobiliaria</strong> brindamos asesoría profesional en la compra,
-    venta y renta de propiedades residenciales, con honestidad, compromiso y atención personalizada.
+    En <strong>Búho Inmobiliaria</strong> nos especializamos en ayudarte a comprar, vender
+    y regularizar tu propiedad de manera segura. Trabajamos con transparencia,
+    experiencia y atención personalizada para que tomes decisiones con confianza.
   </p>
 </section>
 
 <section>
   <h2>Nuestros servicios</h2>
-  <div class="services">
-    <div class="card">🏠 Venta de propiedades</div>
-    <div class="card">🔑 Renta de inmuebles</div>
-    <div class="card">📄 Asesoría inmobiliaria</div>
-    <div class="card">🤝 Acompañamiento total</div>
+  <div class="cards">
+    <div class="card">
+      <h3>Compra de vivienda</h3>
+      <p>Casas nuevas, usadas o recuperadas, adaptadas a tu presupuesto.</p>
+    </div>
+    <div class="card">
+      <h3>Regularización INFONAVIT</h3>
+      <p>Te apoyamos aunque tengas adeudos de agua, luz o predial.</p>
+    </div>
+    <div class="card">
+      <h3>Crédito MEJORAVIT</h3>
+      <p>Tramitamos tu crédito para mejorar o ampliar tu vivienda.</p>
+    </div>
+    <div class="card">
+      <h3>Venta de propiedades</h3>
+      <p>Promocionamos y vendemos tu inmueble de forma profesional.</p>
+    </div>
   </div>
 </section>
 
+<div class="highlight">
+  <h2>Asesoría profesional y certificada</h2>
+  <p>Te acompañamos en todo el proceso, de inicio a cierre.</p>
+</div>
+
 <section>
   <h2>Contacto</h2>
-  <p>Agenda una asesoría gratuita hoy mismo.</p>
-  <a class="btn" href="https://wa.me/521TUNUMERO" target="_blank">
-    Hablar con un asesor
-  </a>
+  <div class="contact-box">
+    <p>Comunícate con nosotros y recibe atención inmediata.</p>
+    <div class="phone">📞 899 234 9622</div>
+    <a class="btn" href="https://wa.me/5218992349622" target="_blank">
+      Hablar por WhatsApp
+    </a>
+  </div>
 </section>
 
 <footer>
-  © 2025 Búho Inmobiliaria
+  © 2025 Búho Inmobiliaria · Todos los derechos reservados
 </footer>
 
 </body>
