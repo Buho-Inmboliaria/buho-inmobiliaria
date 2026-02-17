@@ -1,4 +1,3 @@
 function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("activo");
+  document.getElementById("menu").classList.toggle("active");
 }
