@@ -1,159 +1,146 @@
-/* ----- BODY GENERAL ----- */
-body {
-  background-color: #fff; 
-  color: #111;
-  font-family: Arial, Helvetica, sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
   line-height: 1.6;
 }
 
-/* ----- HEADER ----- */
-header.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #000;
-  border-bottom: 2px solid #333;
+/* HEADER */
+.top {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
 }
 
-header h1 {
-  font-family: 'Georgia', serif;
-  font-size: 36px;
-  font-weight: bold;
-  color: gold;
-  margin: 0;
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
 }
 
-header img.logo {
-  width: 60px;
-  height: auto;
-  margin-right: 10px;
-}
-
-/* ----- HAMBURGUESA ----- */
 .hamburguesa {
-  font-size: 30px;
+  font-size: 28px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
   cursor: pointer;
-  color: gold;
+  display: none;
 }
 
-/* ----- MENÚ ----- */
+/* MENU */
 .menu {
-  display: none;
-  flex-direction: column;
-  background-color: #000;
-  padding: 0;
-  margin: 0;
+  background: #1e293b;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu a {
-  color: gold;
-  padding: 15px 20px;
+  color: white;
   text-decoration: none;
-  border-bottom: 1px solid #333;
-  font-size: 18px;
+  padding: 15px 20px;
 }
 
 .menu a:hover {
-  color: orange;
+  background: #334155;
 }
 
-.menu.activo {
-  display: flex;
-}
-
-/* ----- SECCIONES ----- */
+/* SECCIONES */
 section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-section h2 {
-  font-family: 'Georgia', serif;
-  font-size: 32px;
-  color: gold;
-  margin-bottom: 20px;
-}
-
-section p {
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  color: #111;
-  margin-bottom: 15px;
-  line-height: 1.8;
-}
-
-/* ----- BOTONES ----- */
-a.boton {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: orange;
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-a.boton:hover {
-  background-color: gold;
-}
-
-/* ----- IMÁGENES ----- */
-section img {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
-}
-
-/* ----- FOOTER ----- */
-footer {
-  padding: 20px;
-  background-color: #000;
-  color: gold;
+  padding: 30px 20px;
   text-align: center;
-  font-size: 14px;
-  border-top: 1px solid #333;
 }
 
-footer a {
-  color: orange;
-  text-decoration: none;
+h2 {
+  margin-bottom: 15px;
+  color: #0f172a;
 }
 
-footer a:hover {
-  color: gold;
-}
-
-/* ----- FORMULARIO ----- */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input, form textarea {
-  padding: 10px;
+p {
   margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
 }
 
-form button {
-  padding: 10px;
-  background-color: orange;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+/* TARJETAS */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-form button:hover {
-  background-color: gold;
+.card {
+  background: white;
+  padding: 20px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* IMÁGENES */
+.imagen-principal,
+.imagen-servicios {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* BOTÓN */
+.boton {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background: #1d4ed8;
+}
+
+.boton-cita-final {
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* FOOTER */
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
